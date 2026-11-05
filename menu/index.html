@@ -100,7 +100,91 @@ if (window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)
       </p>
     </div>
   </section>
-</main>
+
+<!-- MUNCHIE MAN FOOD GALLERY -->
+<section class="food-gallery" aria-labelledby="food-gallery-title">
+  <div class="food-gallery-inner">
+    <h2 id="food-gallery-title">A Taste of Munchie Man</h2>
+    <p>Good food. Good people. Good times.</p>
+
+    <div class="food-grid">
+      <figure>
+        <img src="/assets/peoples-dip.jpg" alt="People's Dip sandwich with jus and side salad" loading="lazy">
+        <figcaption>People's Dip</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/assets/pink-eggs.jpg" alt="Pink deviled eggs with pickled onions and dill" loading="lazy">
+        <figcaption>Pink Deviled Eggs</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/assets/petrice.jpg" alt="Petrice sandwich with side salad" loading="lazy">
+        <figcaption>Petrice</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/assets/mx-tostada.jpg" alt="Tuna and avocado tostada" loading="lazy">
+        <figcaption>Tuna Tostada</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/assets/lunch.jpg" alt="Tuna tostada, salad and a glass of wine" loading="lazy">
+        <figcaption>A Taste of Munchie Man</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+.food-gallery {
+  padding: 60px 20px;
+  background: #f7f5f1;
+  text-align: center;
+}
+.food-gallery-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.food-gallery h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 10px;
+}
+.food-gallery p {
+  margin-bottom: 30px;
+}
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.food-grid figure {
+  margin: 0;
+}
+.food-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.food-grid figcaption {
+  padding: 12px 0;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+@media (max-width: 420px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+  </main>
 <footer class="foot">
   <p class="foot__where">Munchie&nbsp;Man<br>113 D St, Davis, CA</p>
   <p class="foot__legal">&copy; 2026 Munchie Man.</p>
